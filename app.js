@@ -225,11 +225,11 @@ if (num < 100) {
 
 // Otherwise, console.log "monkey". 
 
- num = 111;
+num = 111;
 if (num < 5) {
   console.log('little number')
 } else if (num > 10) {
-  console.log('big number') 
+  console.log('big number')
 } else {
   console.log('monkey');
 }
@@ -252,12 +252,14 @@ const thomsCloset = [
     "dark grey button-up",
     "light blue button-up",
     "blue button-up",
-  ],[
+  ],
+  [
     // These are Thom's pants
     "grey jeans",
     "jeans",
     "PJs"
-  ],[
+  ],
+  [
     // Thom's accessories
     "wool mittens",
     "wool scarf",
@@ -267,14 +269,14 @@ const thomsCloset = [
 
 // What's Kristyn wearing today? Using bracket notation to access items in kristynsCloset, log the sentence "Kristyn is rocking that " + the third item in Kristyn's closet + " today!" to the console.
 
-console.log("Kristyn is rocking that " + kristynsCloset[2]+ " today!")
+console.log("Kristyn is rocking that " + kristynsCloset[2] + " today!")
 // Kristyn can't find her left shoe. Remove this item from her closet and save it to a variable named kristynShoe.
 
 const kristynShoe = kristynsCloset.shift();
 
 
 // Kristyn just bought some sweet shades! Add "raybans" to her closet after "yellow knit hat".
-kristynsCloset.splice(5,0, 'raybans');
+kristynsCloset.splice(5, 0, 'raybans');
 
 
 // Kristyn spilled coffee on her hat... modify this item to read "stained knit hat" instead of yellow.
@@ -292,12 +294,12 @@ thomsCloset[2][0]
 // Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
 console.log(`Thom is looking fierce in a ${thomsCloset[0][0]}, ${thomsCloset[1][0]} and ${thomsCloset[2][0]}!`)
 // Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
-thomsCloset[1][2] =`Footie Pajamas`;
+thomsCloset[1][2] = `Footie Pajamas`;
 
 // printGreeting
 // Write a function called printGreeting with a parameter name that returns a greeting with the argument interpolated into the greeting.
 
-const printGreeting = (name)=>{
+const printGreeting = (name) => {
   console.log(`Hello, my name is ${name}`);
 }
 
@@ -306,8 +308,8 @@ printGreeting('Richard');
 // reverseWordOrder
 // Write a function reverseWordOrder that accepts a single argument, a string. The function should return a string with the order of the words reversed. Don't worry about punctuation.
 
-const reverseWordOrder = (str)=>{
- return str.split("").reverse().join('');
+const reverseWordOrder = (str) => {
+  return str.split("").reverse().join('');
 }
 
 console.log(reverseWordOrder("This"));
@@ -325,21 +327,26 @@ console.log(reverseWordOrder("This"));
 
 // Do the same thing for multiplication "mult", division "div", and exponent "exp" (where num2 is the exponent of num1).
 
-const calculator = (num1,num2,operation) => {
+const calculator = (num1, num2, operation) => {
 
-  switch(operation) {
-    case 'add': return num1 + num2;
-    break; 
-    case 'sub': return num1 - num2;
-    break; 
-    case 'mult': return num1 * num2;
-    break; 
-    case 'div': return num1/num2;
-    break; 
-    case 'exp': return num1 ** num2;
-    break; 
-    default: 
-    return 'You passed me something that  doesnt comput'
+  switch (operation) {
+    case 'add':
+      return num1 + num2;
+      break;
+    case 'sub':
+      return num1 - num2;
+      break;
+    case 'mult':
+      return num1 * num2;
+      break;
+    case 'div':
+      return num1 / num2;
+      break;
+    case 'exp':
+      return num1 ** num2;
+      break;
+    default:
+      return 'You passed me something that  doesnt comput'
 
 
   }
@@ -347,7 +354,217 @@ const calculator = (num1,num2,operation) => {
 }
 
 
-console.log(calculator(2,4,'exp'))
+console.log(calculator(2, 4, 'exp'))
 
 // Write a function printCool that accepts one parameter, name as an argument. The function should print the name and a message saying that that person is cool.
 
+const printCool = (name) => {
+  console.log(`${name} is cool`);
+}
+
+printCool('People');
+
+//2
+// Write a function calculateCube that takes a single number and prints the volume of a cube made from that number.
+
+const calculateCube = (num) => {
+  console.log(num ** 3)
+}
+
+calculateCube(5);
+
+// 3
+// Write a function isAVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case.
+
+const isAVowel = (letter) => {
+  switch (letter) {
+    case 'a':
+      return true
+      break;
+    case 'e':
+      return true
+      break;
+    case 'i':
+      return true
+      break;
+    case 'o':
+      return true
+      break;
+    case 'u':
+      return true
+      break;
+    default:
+      return false
+  }
+}
+
+console.log(isAVowel("e"));
+
+// 4
+// Write a function getTwoLengths that accepts two parameters (strings). The function should return an array of numbers where each number is the length of the corresponding string.
+
+const getTwoLengths = (str1, str2) => {
+  return [str1.length, str2.length];
+}
+
+console.log(getTwoLengths('Hank', `Hippopopalous`));
+
+// 5
+// Write a function getMultipleLengths that accepts a single parameter as an argument: an array of strings. The function should return an array of numbers where each number is the length of the corresponding string.
+
+const getMultipleLengths = (arr) => {
+  const lengthArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    lengthArr.push(arr[i].length);
+  }
+  return lengthArr;
+}
+
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+
+
+// 6
+// Define a function maxOfThree that takes three numbers as arguments and returns the largest of them. If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned.
+
+maxOfThree = (num1, num2, num3) => {
+  if (num1 - num2 < 0) {
+    if (num2 - num3 < 0) {
+      return num3;
+    } return num2;
+  } else if (num1-num3 < 0) {
+    return num3
+  } return num1
+}
+
+console.log(maxOfThree(10, 6, 4) );
+
+// 7
+// Write a function printLongestWord that accepts a single argument, an array of strings. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
+
+printLongestWord = (arr)=>{
+ return arr.reduce((accum,curr)=>{
+   console.log(accum, curr, accum.length,curr.length)
+    if(accum.length - curr.length <=0){
+      return curr;
+    }
+    else {
+      return accum;
+    }
+  })
+}
+
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+
+// 8
+// Write a Javascript function called transmogrify. This function should accept three arguments, which you can assume will be numbers. Your function should return the "transmogrified" result.
+
+// The transmogrified result of three numbers is the product of the first two numbers, raised to the power of the third number.
+
+// For example, the transmogrified result of 5, 3, and 2 is (5 times 3) to the power of 2 is 225.
+
+const transmogrify = (num1,num2,num3)=> {
+  return ((num1 *num2)**num3);
+}
+console.log(transmogrify(5, 3, 2));
+
+// Syntax
+// List and describe each individual piece of syntax that we use to construct an object. Don't leave anything out! The list is finite.
+
+// const obj **First we initialize the variable we will use to store an object = { **Curly braces enclose the object key/value pairs
+//   key {the key is usually a string, which is used to attain the value} = value {The value can be any form of data type, if it is a function the key/value pair is called a method of the obj, if it hold simply data it is called a property on the obj},
+//   key = value,
+//   etc
+// }
+
+const me = {
+  name: "Kristyn",
+  age: 98,
+  email: 'kristyn@foo.bar'
+}
+
+console.log(me.name,me.age,me.email);
+me.age = 1000;
+console.log(me.age);
+me.placeOfResidence = `McAllen`;
+console.log(me.placeOfResidence);
+
+// Slimer
+
+const monster = {
+  name: "Slimer",
+  color: "greenish",
+  type: "plasm or ghost or something"
+}
+
+console.log(monster.name);
+monster.type = `creature`;
+monster.age = 6;
+console.log(monster);
+
+// Ogres
+
+const adventurer = {
+  name: `Player Char`,
+  HP: 100,
+  level: 1,
+  mana: 100,
+  swingWeapon() {
+    ogre.HP -= 10
+    return 'You swing your sword at the ogre'
+  }
+}
+
+const ogre = {
+  name: `Frank the Ogre`,
+  HP: 25,
+  level: 1,
+  attack() {
+    adventurer.HP -= 2;
+    return `the ogre charges you`
+  }
+}
+
+for (let i = 0; ogre.HP >= 0 && adventurer.HP >= 0; i++) {
+
+  console.log(adventurer.swingWeapon());
+  console.log(ogre.attack());
+  if (ogre.HP <= 0) {
+    console.log(`${ogre.name} was defeatd`);
+
+  } else if (adventurer <= 0) {
+    console.log("You have died");
+  }
+}
+
+console.log(ogre);
+console.log(adventurer); 
+
+// EXTRA STUFF
+// Cat Combinator
+// 1. Mama cat
+
+const cat1 = {
+  name: `Sims`,
+  breed: `British Short hair`,
+  age:` 5 years old`
+}
+
+console.log(cat1.breed,cat1.age);
+
+const cat2 = {
+  name: `Pa`,
+  breed: `Persian cat`,
+  age:`9 years old`
+}
+
+const combineCats = (mama,papa)=>{
+  return {
+    name: mama.name+papa.name,
+    age: 1,
+    breed: `${mama.breed}-${papa.breed}`
+  }
+}
+
+console.log( combineCats(cat1,cat2) );
+
+console.log( combineCats(combineCats(combineCats(cat1,cat2),combineCats(cat1,cat2)),combineCats(combineCats(cat1,cat2),combineCats(cat1,cat2))) );
